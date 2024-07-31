@@ -1,5 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Welcome from "../components/Welcome.astro";
+import AboutMe from "../components/AboutMe.astro";
+import WorkWithMe from "../components/WorkWithMe.astro";
+import MyTime from "../components/MyTime.astro";
+import Now from "../components/Now.astro";
+import Project from "../components/Project.astro";
 ---
 
 <html lang="en">
@@ -8,12 +14,41 @@ import Layout from "../layouts/Layout.astro";
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content={Astro.generator} />
-        <title>Astro</title>
+        <title>Joe Goodwin</title>
     </head>
-    <body>
+
+    <body class="flex justify-center items-center">
         <Layout>
-            <div class="grid col-span-2 row-span-2">
-                <h1>Test Layout</h1>
+            <div class="row-span-4 lg:col-span-4">
+                <Welcome />
+            </div>
+            <div class="row-span-4 lg:col-span-2">
+                <AboutMe />
+            </div>
+            <div class="row-span-4 lg:col-span-2">
+                <WorkWithMe />
+            </div>
+            <div class="row-span-4 lg:col-span-2">
+                <Now />
+            </div>
+            <div class="row-span-4 lg:col-span-2">
+                <MyTime />
+            </div>
+            <div class="row-span-1 lg:col-span-6">
+                <div
+                    class="flex place-content-center border-2 rounded-md p-5 h-full"
+                >
+                    <h2>Projects</h2>
+                </div>
+            </div>
+            <div class="row-span-4 lg:col-span-2">
+                <Project />
+            </div>
+            <div class="row-span-4 lg:col-span-2">
+                <Project />
+            </div>
+            <div class="row-span-4 lg:col-span-2">
+                <Project />
             </div>
         </Layout>
     </body>
