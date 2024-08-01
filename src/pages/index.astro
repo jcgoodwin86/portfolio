@@ -9,47 +9,45 @@ import Project from "../components/Project.astro";
 ---
 
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="generator" content={Astro.generator} />
-        <title>Joe Goodwin</title>
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Joe Goodwin</title>
+  </head>
 
-    <body class="flex justify-center items-center">
-        <Layout>
-            <div class="row-span-4 lg:col-span-4">
-                <Welcome />
-            </div>
-            <div class="row-span-4 lg:col-span-2">
-                <AboutMe />
-            </div>
-            <div class="row-span-4 lg:col-span-2">
-                <WorkWithMe />
-            </div>
-            <div class="row-span-4 lg:col-span-2">
-                <Now />
-            </div>
-            <div class="row-span-4 lg:col-span-2">
-                <MyTime />
-            </div>
-            <div class="row-span-1 lg:col-span-6">
-                <div
-                    class="flex place-content-center border-2 rounded-md p-5 h-full"
-                >
-                    <h2>Projects</h2>
-                </div>
-            </div>
-            <div class="row-span-4 lg:col-span-2">
-                <Project />
-            </div>
-            <div class="row-span-4 lg:col-span-2">
-                <Project />
-            </div>
-            <div class="row-span-4 lg:col-span-2">
-                <Project />
-            </div>
-        </Layout>
-    </body>
+  <body class="flex items-center justify-center">
+    <Layout>
+      <div class="row-span-4 lg:col-span-4">
+        <Welcome />
+      </div>
+      <div class="row-span-4 lg:col-span-2">
+        <AboutMe />
+      </div>
+      <div class="row-span-4 lg:col-span-2">
+        <WorkWithMe />
+      </div>
+      <div class="row-span-4 lg:col-span-2">
+        <Now />
+      </div>
+      <div class="row-span-4 lg:col-span-2">
+        <MyTime />
+      </div>
+      <div class="row-span-1 lg:col-span-6">
+        <div class="flex h-full place-content-center rounded-md border-2 p-5">
+          <h2>Projects</h2>
+        </div>
+      </div>
+      <div class="row-span-4 lg:col-span-2">
+        <Project />
+      </div>
+      <div class="row-span-4 lg:col-span-2">
+        <Project />
+      </div>
+      <div class="row-span-4 lg:col-span-2">
+        <Project />
+      </div>
+    </Layout>
+  </body>
 </html>

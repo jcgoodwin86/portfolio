@@ -15,6 +15,12 @@
   "devDependencies": {
     "@unocss/preset-uno": "^0.61.5",
     "@unocss/reset": "^0.61.5",
+    "eslint": "^9.8.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-astro": "^1.2.3",
+    "prettier": "3.3.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.5",
     "unocss": "^0.61.5"
   }
 }
