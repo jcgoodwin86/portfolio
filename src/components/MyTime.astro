@@ -3,5 +3,29 @@ import BentoBoxLayout from "../layouts/BentoBoxLayout.astro";
 ---
 
 <BentoBoxLayout>
-  <p>Time</p>
+  <p class="m-0 text-slate-500">Time zone</p>
+  <div id="clock" class="text-3xl"></div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      function updateClock() {
+        const clockElement = document.getElementById("clock");
+        if (!clockElement) {
+          return;
+        }
+        const now = new Date();
+        const options = {
+          timeZone: "America/New_York",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          timeZoneName: "short", // This will include the time zone abbreviation
+        };
+        const formatter = new Intl.DateTimeFormat("en-US", options);
+        clockElement.textContent = formatter.format(now);
+      }
+
+      setInterval(updateClock, 1000); // Update every second
+      updateClock(); // Initial call
+    });
+  </script>
 </BentoBoxLayout>
