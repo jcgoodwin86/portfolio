@@ -8,6 +8,11 @@ export default defineConfig({
     cssExtend: {
       "h1, h2, h3, h4, h5, h6": {
         "font-family": "Lekton",
+        "margin": "0.5em 0",
+        "font-weight": "700",
+      },
+      p: {
+        color: '#101720',
       },
     },
   }),
@@ -19,7 +24,7 @@ export default defineConfig({
       mono: ["Fira Code", "Fira Mono:400,700"],
       // custom ones
       lobster: "Lobster",
-      lekton: "Lekton",
+      lekton: ["Lekton", "Lekton:400,700"],
       spacemono: "Space Mono",
       lato: [
         {

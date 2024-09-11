@@ -1,12 +1,25 @@
 ---
+import { Image } from "astro:assets";
 import BentoBoxLayout from "../layouts/BentoBoxLayout.astro";
+import profilePhoto from "../images/profile_photo.jpeg";
 ---
 
 <BentoBoxLayout>
-  <h1>Welcome</h1>
-  <p>Hi, I'm Joe Goodwin, a web developer.</p>
-  <p>
-    Feel free to reach out to me if you have any projects in mind, or just to
-    say hello.
-  </p>
+  <div class="grid grid-cols-3 place-items-center">
+    <div class="col-span-2">
+      <h1>Welcome</h1>
+      <p>Hi, I'm Joe Goodwin, a web developer.</p>
+      <p>
+        Feel free to reach out to me if you have any projects in mind, or just
+        to say hello.
+      </p>
+    </div>
+    <div>
+      <Image
+        src={profilePhoto}
+        alt="Joe's Profile Photo"
+        class="m-auto size-3/4 rounded-full object-cover"
+      />
+    </div>
+  </div>
 </BentoBoxLayout>
