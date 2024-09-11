@@ -19,33 +19,22 @@ import Project from "../components/Project.astro";
 
   <body class="flex items-center justify-center">
     <Layout>
-      <div class="row-span-4 lg:col-span-4">
+      <div class="rounded-md border-2 p-4" style="grid-area: welcome;">
         <Welcome />
       </div>
-      <div class="row-span-4 lg:col-span-2">
+      <div class="rounded-md border-2 p-4" style="grid-area: about;">
         <AboutMe />
       </div>
-      <div class="row-span-4 lg:col-span-2">
+      <div class="rounded-md border-2 p-4" style="grid-area: workwithme;">
         <WorkWithMe />
       </div>
-      <div class="row-span-4 lg:col-span-2">
-        <Now />
-      </div>
-      <div class="row-span-4 lg:col-span-2">
+      <div class="rounded-md border-2 p-4" style="grid-area: time;">
         <MyTime />
       </div>
-      <div class="row-span-1 lg:col-span-6">
-        <div class="flex h-full place-content-center rounded-md border-2 p-5">
-          <h2>Projects</h2>
-        </div>
+      <div class="rounded-md border-2 p-4" style="grid-area: now;">
+        <Now />
       </div>
-      <div class="row-span-4 lg:col-span-2">
-        <Project />
-      </div>
-      <div class="row-span-4 lg:col-span-2">
-        <Project />
-      </div>
-      <div class="row-span-4 lg:col-span-2">
+      <div class="rounded-md border-2 p-4" style="grid-area: projects;">
         <Project />
       </div>
     </Layout>

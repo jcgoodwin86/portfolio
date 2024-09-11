@@ -2,8 +2,19 @@
 
 ---
 
-<section
-  class="font-spacemono w-none m-5 grid gap-5 lg:m-10 lg:w-3/4 lg:grid-cols-6"
->
+<style>
+  section {
+    grid-template-areas:
+      "welcome welcome welcome welcome about about"
+      "welcome welcome welcome welcome about about"
+      "welcome welcome welcome welcome about about"
+      "welcome welcome welcome welcome about about"
+      "workwithme workwithme time time now now"
+      "workwithme workwithme time time now now"
+      "workwithme workwithme projects projects projects projects"
+      "workwithme workwithme projects projects projects projects";
+  }
+</style>
+<section class="font-spacemono w-none m-5 grid gap-3 lg:m-10 lg:w-3/4">
   <slot />
 </section>
