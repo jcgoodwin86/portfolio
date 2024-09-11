@@ -5,8 +5,8 @@ import profilePhoto from "../images/profile_photo.jpeg";
 ---
 
 <BentoBoxLayout>
-  <div class="flex">
-    <div>
+  <div class="grid grid-cols-3 place-items-center">
+    <div class="col-span-2">
       <h1>Welcome</h1>
       <p>Hi, I'm Joe Goodwin, a web developer.</p>
       <p>
@@ -14,11 +14,11 @@ import profilePhoto from "../images/profile_photo.jpeg";
         to say hello.
       </p>
     </div>
-    <div class="flex-none">
+    <div>
       <Image
         src={profilePhoto}
         alt="Joe's Profile Photo"
-        class="size-40 rounded-full object-cover object-center object-right-top"
+        class="m-auto size-3/4 rounded-full object-cover"
       />
     </div>
   </div>
