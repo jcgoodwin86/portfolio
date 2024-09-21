@@ -20,23 +20,31 @@ export default defineConfig({
     provider: "google", // default provider
     fonts: {
       // these will extend the default theme
-      sans: "Roboto",
-      mono: ["Fira Code", "Fira Mono:400,700"],
+      // sans: "Roboto",
+      mono: ["Azeret Mono:300", "Fira Code", "Fira Mono:400,700"],
       // custom ones
-      lobster: "Lobster",
-      lekton: ["Lekton", "Lekton:400,700"],
-      spacemono: "Space Mono",
-      lato: [
+      // lobster: "Lobster",
+      // lekton: ["Lekton", "Lekton:400,700"],
+      satoshi: [
         {
-          name: "Lato",
-          weights: ["400", "700"],
-          italic: true,
-        },
-        {
-          name: "sans-serif",
-          provider: "none",
+          name: "Satoshi",
+          weights: ["400"],
+          provider: 'fontshare'
         },
       ],
+      // spacemono: "Space Mono",
+      // lato: [
+      //   {
+      //     name: "Lato",
+      //     weights: ["400", "700"],
+      //     italic: true,
+      //   },
+      //   {
+      //     name: "sans-serif",
+      //     provider: "none",
+      //   },
+      // ],
+      inter: ["Inter", "Inter:400,700"]
     },
   }),
 ]
