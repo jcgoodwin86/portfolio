@@ -1,18 +1,19 @@
 // uno.config.ts
-import { defineConfig, presetTypography, presetWebFonts, presetUno } from "unocss";
+import { defineConfig, presetWebFonts, presetUno } from "unocss";
 
 export default defineConfig({
+  theme: {
+    colors: {
+      "light": "#5c636e",
+      borderColor: "#5c636e", // Define border color directly at the same level
+    },
+  },
   presets: [
-  presetUno(),
-  presetTypography({
-    cssExtend: {
-      "h1, h2, h3, h4, h5, h6": {
-        "font-family": "Lekton",
-        "margin": "0.5em 0",
-        "font-weight": "700",
-      },
-      p: {
-        color: '#101720',
+  presetUno({
+    theme: {
+      // Set the default border color using a CSS variable
+      borderColor: {
+        DEFAULT: 'var(--un-default-border-color, #5c636e)', // Fallback color if the variable is not set
       },
     },
   }),
@@ -22,9 +23,6 @@ export default defineConfig({
       // these will extend the default theme
       // sans: "Roboto",
       mono: ["Azeret Mono:300", "Fira Code", "Fira Mono:400,700"],
-      // custom ones
-      // lobster: "Lobster",
-      // lekton: ["Lekton", "Lekton:400,700"],
       satoshi: [
         {
           name: "Satoshi",
@@ -32,19 +30,6 @@ export default defineConfig({
           provider: 'fontshare'
         },
       ],
-      // spacemono: "Space Mono",
-      // lato: [
-      //   {
-      //     name: "Lato",
-      //     weights: ["400", "700"],
-      //     italic: true,
-      //   },
-      //   {
-      //     name: "sans-serif",
-      //     provider: "none",
-      //   },
-      // ],
-      inter: ["Inter", "Inter:400,700"]
     },
   }),
 ]
